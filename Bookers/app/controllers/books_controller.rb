@@ -1,10 +1,10 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_action :set_book, only: [:show, :edit, :update, :destroy,]
 
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
+    @book = Book.new
   end
 
   # GET /books/1
@@ -15,6 +15,7 @@ class BooksController < ApplicationController
   # GET /books/new
   def new
     @book = Book.new
+    @books = Book.all
   end
 
   # GET /books/1/edit
@@ -31,6 +32,8 @@ class BooksController < ApplicationController
         format.html { redirect_to @book, notice: 'Book was successfully created.' }
         format.json { render :show, status: :created, location: @book }
       else
+        
+        @books = Book.all
         format.html { render :new }
         format.json { render json: @book.errors, status: :unprocessable_entity }
       end
@@ -56,7 +59,7 @@ class BooksController < ApplicationController
   def destroy
     @book.destroy
     respond_to do |format|
-      format.html { redirect_to books_url, notice: 'Book was successfully destroyed.' }
+      format.html { redirect_to new_book_path, notice: 'Book was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
