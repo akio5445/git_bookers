@@ -1,3 +1,95 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    background-color: #dddddd;
+    color: #333;
+    margin: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    line-height: 13px;
+    border: 20px 20px hsl(0, 21%, 56%);
+  }
+
+
+  p, ol, ul, td {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+
+  pre {
+    background-color: #eee;
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  a {
+    color: #000;
+  
+    &:visited {
+      color: rgba(4, 56, 56, 0.4);
+    }
+  
+    &:hover {
+      color: #fff;
+      background-color: #0222;
+    }
+  }
+
+
+  th {
+    padding-bottom: 5px;
+  }
+
+
+  td {
+    padding: 0 10px 9px;
+  }
+
+
+  div {
+    &.field, &.actions {
+      margin-bottom: 10px;
+    }
+  }
+
+
+  #notice {
+    color: white;
+  }
+
+
+
+  .field_with_errors {
+    padding: 2px;
+    background-color: white;
+    display: table;
+  
+  #error_explanation {
+    width: 450px;
+    border: 2px solid blue;
+    padding: 7px 7px 0;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+  }
+    h2 {
+      text-align: left;
+      font-weight: bold;
+      padding: 10px 15px 5px 5px;
+      font-size: 12px;
+      margin: -7px -7px 0;
+      background-color: #6675;
+      color: #fff;
+    }
+    ul li {
+      font-size: 12px;
+      list-style: square;
+    }
+  }
+
+  
+  label {
+    display: block;
+  }
